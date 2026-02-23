@@ -50,16 +50,15 @@ export default function Chat(){
                 <button onClick={() => setShowFeedback(true)}>
                     Give Feedback
                 </button>
-                <button onClick={() => setMessages([])}>
-                    New Query
+             <button onClick={() => setMessages([])}>
+                New Query?
                 </button>
                 </div>
             )}
             {showFeedback && (
-                <FeedbackModal onClose={() => setShowFeedback(false)} />
-            )
+            <FeedbackModal close={() => setShowFeedback(false)} />
+            )}
 
-            }
         </div>
     )
 } 

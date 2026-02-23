@@ -1,14 +1,15 @@
 import { useState } from "react";
 import "../index.css";
 
-export default function MessageBubble({ message }){
-    const [liked, setLiked] = useState(false);
+export default function MessageBubble({ message }) {
+  const [liked, setLiked] = useState(null);
 
-    return (
-        <div className={`message-bubble ${message.sender}`}>
-            <p>{message.text}</p>
-                 
-        {message.sender === "bot" && (
+  return (
+    <div className={`message ${message.sender}`}>
+
+      <p>{message.text}</p>
+
+      {message.sender === "bot" && (
         <div className="feedback-icons">
 
           <span
@@ -27,6 +28,6 @@ export default function MessageBubble({ message }){
 
         </div>
       )}
-        </div>
-    )
+    </div>
+  );
 }

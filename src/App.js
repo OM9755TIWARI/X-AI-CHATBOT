@@ -1,10 +1,7 @@
-// import logo from './logo.svg';
-import { Divide } from 'lucide-react';
-import "./index.css";
-import Header from './components/Header';
-import {Routes, Route} from 'react-router-dom';
-import Chat from './pages/Chat';
-import History from './pages/History';
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Chat from "./pages/Chat";
+import History from "./pages/History";
 
 function App() {
   return (
@@ -12,8 +9,8 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path='/' element={<Chat/>}/>
-        <Route path="/history" element={<History />}  />
+        <Route path="/" element={<Chat />} />
+        <Route path="/history" element={<History />} />
       </Routes>
     </div>
   );
